@@ -1,9 +1,11 @@
 package kr.co.loopz.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequiredArgsConstructor
 public class UserController {
 
     @GetMapping("/user/hello")
@@ -11,5 +13,10 @@ public class UserController {
         return "Hello, USER!";
     }
 
+
+    @GetMapping("/user")
+    public String getUser() {
+        return "User details retrieved successfully!";
+    }
 
 }
