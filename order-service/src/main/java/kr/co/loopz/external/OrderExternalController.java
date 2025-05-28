@@ -1,14 +1,13 @@
-package kr.co.loopz.controller;
+package kr.co.loopz.external;
 
 import kr.co.loopz.service.OrderService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-public class OrderController {
+public class OrderExternalController {
 
     private final OrderService orderService;
 

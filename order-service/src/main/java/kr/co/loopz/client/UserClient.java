@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @FeignClient(
         name = "user-client",
         url  = "${user.service.url}",
-        path = "/user"
+        path = "/internal/user"
 )public interface UserClient {
 
     @GetMapping
