@@ -2,4 +2,5 @@ rootProject.name = 'modular-monoliths'
 include 'order-service'
 include 'user-service'
 include 'application'
+include 'common'
 

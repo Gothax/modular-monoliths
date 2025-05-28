@@ -1,23 +1,20 @@
 package kr.co.loopz.service;
 
+import kr.co.loopz.client.UserClient;
 import kr.co.loopz.dto.UserResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestClient;
 
 @Service
 @RequiredArgsConstructor
 public class OrderService {
 
-    private final ApplicationEventPublisher applicationEventPublisher;
-
+    private final UserClient userClient;
 
     public String createOrder(String userId, String productId, int quantity) {
-        // Logic to create an order
-        RestClient restClient = RestClient.create();
 
-
+        UserResponse userDetails = userClient.getUserDetails();
+        System.out.println("userDetails = " + userDetails);
 
         return "Order created successfully for user: " + userId + " with product: " + productId + " and quantity: " + quantity;
     }

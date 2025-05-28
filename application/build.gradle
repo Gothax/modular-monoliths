@@ -3,6 +3,7 @@ dependencies {
 
     implementation project(':user-service')
     implementation project(':order-service')
+    implementation project(':common')
 
     testImplementation project (':user-service')
     testImplementation project(':order-service')

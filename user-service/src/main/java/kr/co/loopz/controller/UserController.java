@@ -1,5 +1,6 @@
 package kr.co.loopz.controller;
 
+import kr.co.loopz.dto.UserResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,8 +16,8 @@ public class UserController {
 
 
     @GetMapping("/user")
-    public String getUser() {
-        return "User details retrieved successfully!";
+    public UserResponse getUser() {
+        return new UserResponse("Hello, User!");
     }
 
 }
