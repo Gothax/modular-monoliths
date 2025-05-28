@@ -1,6 +1,6 @@
 package kr.co.loopz.dto;
 
-public record UserResponse(
+public record UserInternalResponse(
         String message
 ) {
 }
